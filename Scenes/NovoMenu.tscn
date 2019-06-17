@@ -1,0 +1,65 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/NovoMenu.gd" type="Script" id=1]
+[ext_resource path="res://Background/LogoNew.png" type="Texture" id=2]
+[ext_resource path="res://fontes/Pantano Thing.otf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 80
+outline_color = Color( 0.745098, 0.0470588, 0.0470588, 1 )
+extra_spacing_top = -7
+extra_spacing_space = -2
+font_data = ExtResource( 3 )
+
+[node name="NovoMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 12.0
+margin_top = -12.046
+margin_right = -14.689
+margin_bottom = -18.026
+rect_pivot_offset = Vector2( -0.1, 0 )
+
+[node name="Sprite" type="Sprite" parent="CenterContainer"]
+position = Vector2( 499.344, 312.126 )
+scale = Vector2( 1.05921, 0.828729 )
+z_index = -1
+texture = ExtResource( 2 )
+
+[node name="BotaoInicio" type="Button" parent="CenterContainer/Sprite"]
+margin_left = -140.237
+margin_top = -52.6851
+margin_right = 98.7626
+margin_bottom = -22.6851
+custom_colors/font_color = Color( 0.972549, 0.0823529, 0.0823529, 1 )
+text = "INÍCIO"
+
+[node name="SAIR" type="Button" parent="CenterContainer/Sprite"]
+margin_left = -140.237
+margin_top = -11.6851
+margin_right = 97.7626
+margin_bottom = 19.3149
+custom_colors/font_color = Color( 0.968627, 0.0627451, 0.0627451, 1 )
+text = "SAIR"
+
+[node name="Label" type="Label" parent="."]
+margin_left = -96.386
+margin_top = -78.0517
+margin_right = 1156.61
+margin_bottom = 310.948
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.929412, 0.141176, 0.141176, 1 )
+text = "Ninja of Labyrinths"
+align = 1
+valign = 1
+clip_text = true
+uppercase = true
+max_lines_visible = 1
+
+[connection signal="pressed" from="CenterContainer/Sprite/BotaoInicio" to="." method="_on_BotaoInicio_pressed"]
+[connection signal="pressed" from="CenterContainer/Sprite/SAIR" to="." method="_on_FECHARJOGO_pressed"]
