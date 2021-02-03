@@ -7,3 +7,5 @@ Bem-vindo ao jogo Ninja of Labirynths!
 
 O jogo em questão possui físicas de gravidade, possibilidade de escalar paredes utilizando as setas, e a dificuldade no jogo são os objetos em forma de serra. 
 Para finalizar cada fase do jogo, é necessário se chegar ao portal que conecta a próxima fase. Existem 3 fases criadas no jogo.
+
+O jogo é bem curto, foi utilizado como projeto final da aula de Jogos Digitais, da profª Erica Lopes (6º Semestre).
